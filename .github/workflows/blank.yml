@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: on Success
+      if: ${{ success() }}
+      uses: devellany/send-mail@v1.0.2
+      with:
+        host: smtp.gmail.com
+        port: 465
+        from: ${{secrets.MAIL_ADDRESS}}
+        account: ${{secrets.MAIL_ADDRESS}}
+        password: ${{secrets.MAIL_PASSWORD}}
+        sender: Warda Bibi
+        subject: Github Actions job Success result
+        body: |
+                Testing Server Workflow was successfully executed in
+                ${{ github.repository }}
+                and changes were deployed to the Testing Server.
+        to: wardahtariq38@gmail.com
