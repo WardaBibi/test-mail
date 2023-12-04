@@ -25,3 +25,4 @@ jobs:
                 ${{ github.repository }}
                 and changes were deployed to the Testing Server.
         to: wardahtariq38@gmail.com
+        contentType: text/plain
