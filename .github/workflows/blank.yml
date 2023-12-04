@@ -18,6 +18,6 @@ jobs:
           subject: Github Actions job result
           to: codewithwarda@gmail.com
           
-          from: warda BIBI 
+          from: warda BIBI  
           
           body: Build job of ${{ github.repository }} completed successfully!
