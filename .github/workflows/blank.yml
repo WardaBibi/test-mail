@@ -17,9 +17,9 @@ jobs:
     
         
        # # Optional (recommended) mail server username:
-       #  username: ${{secrets.MAIL_USERNAME}}
-       #  # Optional (recommended) mail server password:
-       #  password: ${{secrets.MAIL_PASSWORD}}
+        username: ${{secrets.MAIL_ADDRESS}}
+        # Optional (recommended) mail server password:
+        password: ${{secrets.MAIL_PASSWORD}}
         # Required mail subject:
         subject: Github Actions job result
         # Required recipients' addresses:
